@@ -1,4 +1,4 @@
-# Nuxt payload extractor
+# Nuxt state extractor
 
 Nuxt.js module that makes `nuxt generate` command to store vuex state as json file.
 
