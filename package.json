@@ -9,7 +9,7 @@
   "files": [
     "lib"
   ],
-  "homepage": "https://github.com/DreaMinder/nuxt-state-extractor",
+  "homepage": "https://github.com/souljorje/nuxt-state-extractor",
   "license": "MIT",
   "main": "lib/module.js",
   "name": "nuxt-state-extractor",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DreaMinder/nuxt-state-extractor.git"
+    "url": "git+https://github.com/souljorje/nuxt-state-extractor.git"
   },
   "version": "1.0.1"
 }
