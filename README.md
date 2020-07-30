@@ -121,5 +121,5 @@ You can blacklist specific paths using `blacklist: []` options. They will be gen
 ## How it works
 
 - Extracts page data during ['render:routeContext'](https://nuxtjs.org/api/internals-renderer#hooks) hook
-- Writes extracted data in ['export:done'](https://nuxtjs.org/api/internals-generator#hooks) hook
+- Writes extracted data in ['generate:done'](https://nuxtjs.org/api/internals-generator#hooks) hook
 - \$stateURL helper composes url: `${document.location.origin}${routerBase}${staticAssetsBase}${routePath}/${fileName}`
