@@ -43,12 +43,11 @@ export const actions = {
   },
   getRootData({ dispatch }, context) {
     const {
-      app, $stateURL, $axios, route,
+      app, $stateURL, $axios, route, isDev,
     } = context;
-    const apollo = app.apolloProvider.defaultClient;
     const { locale } = app.i18n;
     // if generated and works as client navigation, fetch previously saved static JSON payload, otherwise use your fetch logic
-    const data = await process.static && process.client
+    const data = await !isDev && process.static && process.client
       ? $axios.$get($stateURL(route))
       : $axios.$get(`/my-api/root-data/${locale}`);
     };
@@ -88,7 +87,7 @@ export const actions = {
     const { locale } = app.i18n;
     let data;
     // if generated and works as client navigation, fetch previously saved static JSON payload, otherwise use apollo query
-    if (process.static && process.client) {
+    if (!isDev && process.static && process.client) {
       const response = await fetch($stateURL(route));
       data = response.json();
     } else {
